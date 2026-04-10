@@ -1,0 +1,39 @@
+{
+  "config": {
+    "sync_interval_seconds": 5,
+    "max_sessions": 10,
+    "conflict_resolution": "timestamp",
+    "enabled": true,
+    "web_monitor_port": 26710,
+    "backup_enabled": true,
+    "backup_retention_days": 7,
+    "log_level": "INFO",
+    "max_log_size_mb": 10
+  },
+  "paths": {
+    "memory_file": "~/.openclaw/workspace/MEMORY.md",
+    "backup_dir": "~/.openclaw/workspace/memory_backups",
+    "log_dir": "~/.openclaw/workspace/sync_logs",
+    "state_file": "~/.openclaw/workspace/.sync_state.json"
+  },
+  "features": {
+    "real_time_sync": true,
+    "web_monitor": true,
+    "auto_backup": true,
+    "session_detection": true,
+    "error_recovery": true,
+    "simulated_messaging": true,
+    "real_messaging": false
+  },
+  "notifications": {
+    "on_sync_success": false,
+    "on_sync_failure": false,
+    "on_session_change": false
+  },
+  "performance": {
+    "timeout_seconds": 3,
+    "max_retries": 3,
+    "retry_delay_seconds": 1,
+    "batch_size": 5
+  }
+}
